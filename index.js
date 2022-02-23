@@ -47,7 +47,8 @@ let topMovies = [
 
 
 app.use((err, req, res, next) => {
-  // logic
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
   
   // listen for requests
