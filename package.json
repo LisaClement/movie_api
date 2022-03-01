@@ -3,7 +3,9 @@
     "body-parser": "^1.19.2",
     "express": "^4.17.3",
     "lodash": "^4.17.21",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "^8.9.0"
@@ -13,7 +15,9 @@
   "description": "First Package",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",

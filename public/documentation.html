@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+
 <body>
     <h1> Documentation </h1>
     <hr>
@@ -30,6 +36,77 @@
              <li>Allow existing users to deregister</li>
              <li>Allow users to create a "To Watch" list in addition to their "Favorite Movies" list</li>
           </ul>
+        <br>
+      
+        <table>
+          <tr>
+            <th>Business Logic</th>
+            <th>URL</th>
+            <th>HTTP Methode</th>
+            <th>Request body data format</th>
+            <th>Response body data format</th>
+          </tr>
+          <tr>
+            <td>Return a list of ALL movies to the user</td>
+            <td>/movies</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding data about all the movies</td>
+          </tr>
+          <tr>
+            <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
+            <td>/movies/[title]</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding data about a specified movie</td>
+          </tr>
+          <tr>
+            <td>Return a list of movies from a specific genre</td>
+            <td>movies/genres/[genre]</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding a list of movies from a specific genre.</td>
+          </tr>
+          <tr>
+            <td>Return a list of movies from a specific director</td>
+            <td>/movies/directors/[name]</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding a list of movies from a specific director</td>
+          </tr>
+          <tr>
+            <td>Allow new users to register</td>
+            <td>/users/register</td>
+            <td>POST</td>
+            <td>A JSON object holding data for a new user.<br>Example:{
+              <br>"Username": "Elisabeth"
+              <br>"Email": "eli@gmail.com"}
+              </td>
+            <td>A JSON object holding data for the new user (email, username)</td>
+          </tr>
+          <tr>
+            <td>Allow users to update their user info (username)</td>
+            <td>/users/[userID]</td>
+            <td>PUT</td>
+            <td>A JSON object holding the data to be updated for the user. </td>
+            <td>A text message indicating the email/username combination that was updated</td>
+          </tr>
+          <tr>
+            <td>Allow users to add a movie to their list of favorites (showing only a text that a movie has been added—more on this later)</td>
+            <td>/users/[username]/favorites/add/[title]</td>
+            <td>POST</td>
+            <td>None</td>
+            <td>A message indicating that a movie was successfully added to a user’s favorite list. </td>
+          </tr>
+          <tr>
+            <td>Allow existing users to deregister (showing only a text that a user email has been removed—more on this later)</td>
+            <td>/users/deregister/[username]</td>
+            <td>DELETE</td>
+            <td>None</td>
+            <td>A message indicating that a user was removed.</td>
+          </tr>
+        </table>
+
         <br>
         <h2><u>Built with: </u></h2>
           <ul>
