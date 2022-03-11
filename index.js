@@ -24,68 +24,6 @@ app.use(morgan('common'));
 app.use(express.static('public'));
  
 
-
-let users = [
-  {
-    id: 1,
-    name: 'Pierre', 
-    email: 'pierre@gmail.com'
-   },
-]
-
-let movies = [
-  {
-   title: 'The Notebook', 
-   director: 'Nick Cassavetes',
-   genre: 'Romance',
-   description: 'A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.',
-   year: 2004,
-   imdb_rating: 7.8
-  },
-  {
-   title: 'Deadpool',
-   director: 'Tim Miller',
-   genre: 'Super heroes',
-   description: 'A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.',
-   year: 2016,
-   imdb_rating: 8.0
-  },
-  {
-   title: 'Free Guy',
-   director: 'Shawn Levy',
-   genre:'Comedy',
-   description: 'A bank teller discovers that he is actually an NPC inside a brutal, open world video game.',
-   year: 2021,
-   imdb_rating: 7.2
-  },
-  {
-   title: 'A Star Is Born', 
-   director: 'Bradley Cooper',
-   genre:'Romance',
-   description:'A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.',
-   year: 2018,
-   imdb_rating: 7.6
-  },
-
-  {
-    title: 'Inception', 
-    director: 'Christopher Nolan',
-    genre:'SciFi',
-    description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
-    year: 2010,
-    imdb_rating: 8.8
-   },
-  
-  {
-   title: 'King Richard',
-   author: 'Reinaldo Marcus Green',
-   genre: 'Drama',
-  description:'A look at how tennis superstars Venus and Serena Williams became who they are after the coaching from their father Richard Williams.',
-  year: 2021,
-  imdb_rating: 7.6
-  }
-];
-
 // GET request for home page
 app.get('/', (req, res) => {
   res.send('Welcome to my movie club!');
