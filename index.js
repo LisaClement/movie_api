@@ -38,9 +38,12 @@ app.use(cors()); // allows access from all origins
  // }
 //}));
 
-let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
+let auth = require('./auth')(app);
+
+const dotenv = require(`dotenv`);
+dotenv.config();
 
 // logging middleware
 app.use(morgan('common'));
