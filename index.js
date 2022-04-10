@@ -22,7 +22,7 @@ const express = require("express"),
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json( ));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const cors = require("cors");
@@ -77,7 +77,7 @@ app.get(
 
 // Post request to create a new user
 app.post(
-  "/users/register",
+  "/users",
   [
     // check comes from express-validator
     check(
